@@ -1,0 +1,5 @@
+1.
+org.codehaus.plexus.archiver.jar.Manifest.write(java.io.PrintWriter)
+Eclipse中Maven插件版本过低
+在Help->Install New Software->add,输入下面的链接
+https://otto.takari.io/content/sites/m2e.extras/m2eclipse-mavenarchiver/0.17.2/N/LATEST

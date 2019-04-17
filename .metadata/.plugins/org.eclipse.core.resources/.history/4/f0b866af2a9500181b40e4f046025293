@@ -1,0 +1,16 @@
+package com.zzu.leetcode.second;
+
+public class Seventy_Three {
+public String numberToWords(int num) {
+	String[] first = new String{};
+	
+	
+	
+	
+	
+	
+	return null;
+        
+    }
+
+}

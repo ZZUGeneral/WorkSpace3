@@ -1,0 +1,26 @@
+package com.zzu.leetcode.second;
+
+public class Thirty_Five {
+	public static void main(String[] args) {
+		int[] num = { 1, 2, 3, 4, 5 };
+		int tem_target = 6;
+		int i = searchInsert(num, tem_target);
+		System.out.println("This is " + i);
+	}
+
+	public static int searchInsert(int[] nums, int target) {
+		for (int i = 0; i < nums.length; i++) {
+			if (nums[i] == target)
+				return i;
+			else {
+				if (nums[i] > target)
+					return i;
+
+			}
+
+		}
+
+		return target;
+
+	}
+}

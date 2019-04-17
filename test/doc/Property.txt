@@ -1,0 +1,27 @@
+自定义Property
+在web开发的过程中，我经常需要自定义一些配置文件，如何使用呢
+
+配置在application.properties中
+com.neo.title=纯洁的微笑
+com.neo.description=分享生活和技术
+自定义配置类
+
+@Component
+public class NeoProperties {
+	@Value("${com.neo.title}")
+	private String title;
+	@Value("${com.neo.description}")
+	private String description;
+
+	//省略getter settet方法
+
+	}
+
+log配置
+配置输出的地址和输出级别
+
+logging.path=/user/local/log
+logging.level.com.favorites=DEBUG
+logging.level.org.springframework.web=INFO
+logging.level.org.hibernate=ERROR
+path为本机的log地址，logging.level  后面可以根据包路径配置不同资源的log级别

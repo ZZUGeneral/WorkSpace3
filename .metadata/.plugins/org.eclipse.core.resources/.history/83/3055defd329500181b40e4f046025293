@@ -1,0 +1,46 @@
+package com.zzu.leetcode.second;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Seventy_Three {
+	 public static void main(String[] args) throws IOException {
+	   
+	            
+	            String ret = new Seventy_Three().numberToWords(123456789);
+	            
+	           
+	            
+	            System.out.print(out);
+	        
+	    }
+	public static String numberToWords(int num) {
+		String[] third = {"","Thousand ","Million ","Billion "};
+		String result = "";
+		int temp = 0,count = 0;
+		while(num > 0){
+			temp = num % 1000;
+			result = temp + third[count++] +result;
+			num = (num - temp) / 1000;
+		}
+		return result;
+	    }
+	public static String ToWords(int num){
+		String[][] first = {{"One","Two","Three","Four","Five","Six","Seven","Eight","Nine"},
+							{"Ten","Twenty","Thirty","Forty","Fifty","Sixty","Seventy","Eighty","Ninety"},
+							{"One Hundred","Two Hundred","Three Hundred","Four Hundred","Five Hundred","Six Hundred","Seven Hundred","Eight Hundred","Nine Hundred"}};
+		String result = "";
+		int count = 0, temp = 0;
+		if(num == 11) return "Eleven ";
+		if(num == 12) return "Twelve";
+		while(num>0){
+			temp = num % 10;
+			result = first[count][temp] + " " + result;
+			count ++;
+			num = (num - temp) / 10;
+		}
+		return result;
+	}
+
+}

@@ -1,0 +1,27 @@
+package com.zzu.leetcode.second;
+
+public class Seventy_Three {
+	public String numberToWords(int num) {
+		String[] first = {"One","Two","Three","Four","Five","Six","Seven","Eight","Nine","Eleven","Twelve"};
+		String[] second = {"Ten","Twenty","Thirty","Forty","Fifty","Sixty","Seventy","Eighty","Ninety"};
+		String[] third = {"","Hundred ","Thousand ","Million ","Billion "};
+		String result = "";
+		int temp = 0,count = 0;
+		while(num > 0){
+			temp = num % 1000;
+			result = temp + third[count++] +result;
+			num = (num - temp) / 1000;
+		}
+		
+		
+		
+		
+		return result;
+	    }
+	public String ToWords(int num){
+		
+		
+		retrun "";
+	}
+
+}

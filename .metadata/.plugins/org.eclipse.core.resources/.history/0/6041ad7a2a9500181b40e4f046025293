@@ -1,0 +1,20 @@
+package com.zzu.leetcode.second;
+
+public class Twenty_Seven {
+    public int removeElement(int[] nums, int val) {
+        int i,j;
+		int len = nums.length;  //  保存长度
+		for ( i = 0; i < len; i++) {
+			//  删除重复的元素
+			if (nums[i] == val) {
+				for ( j = i; j < len-1; j++) {
+					nums[j] = nums[j + 1];
+				}
+				len --;
+				if(i==len) return len;
+				else i--;
+			}
+		}
+		return len;
+    }
+}

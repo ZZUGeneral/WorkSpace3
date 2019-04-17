@@ -1,0 +1,17 @@
+package com.zzu.leetcode.first;
+
+public class Nine_Second {
+    public boolean isPalindrome(int x) {
+        if(x<0) return false;   //   负数返回False
+        //  temp 暂时保存x result表示 x 逆序的结果， last 是temp的最后一个数字
+        int temp = x,result = 0,last = 0;
+        while(temp>0){
+            last = temp % 10;
+            result = result *10 + last;
+            temp = (temp - last)/10;
+        }
+        
+        if(x==result)   return true;
+        else return false;
+    }
+}

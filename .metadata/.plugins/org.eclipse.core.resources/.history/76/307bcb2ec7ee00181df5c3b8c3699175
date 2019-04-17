@@ -1,0 +1,13 @@
+package com.zzu.leetcode.second;
+
+public class Thirty_Five {
+	int[] num = { 1, 2, 3, 4, 5 };
+	int tem_target = 6;
+	int i = searchInsert(num, tem_target);
+
+	public int searchInsert(int[] nums, int target) {
+
+		return target;
+
+	}
+}

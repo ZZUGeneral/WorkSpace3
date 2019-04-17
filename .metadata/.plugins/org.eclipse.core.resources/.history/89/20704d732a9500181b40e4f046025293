@@ -1,0 +1,20 @@
+package com.zzu.leetcode.first;
+
+public class One {
+    public int[] twoSum(int[] nums, int target) {
+        int x=0,y=0;    // 璁剧疆涓や釜鍙傛暟鏉ヨ〃绀鸿繍绠楁椂鐨勪袱涓姞鏁扮殑涓嬫爣
+        int[] result = new int[2];  // 杩斿洖鏁版嵁鍊�
+        for(x = 0; x < nums.length;x++){
+             int temp = target - nums[x];   // 鑾峰彇闇�瑕佹壘鍒扮殑鏁�
+            for(y =0; y< nums.length;y++){
+                if((nums[y]==temp)&&(y!=x)){
+                    result[0] = x;
+                    result[1] = y;
+                    return result;
+                }
+            }
+        }
+        return null;
+        
+    }
+}
